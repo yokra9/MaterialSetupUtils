@@ -4,7 +4,7 @@
 
 ## 導入方法
 
-1. [Booth](https://yokra.booth.pm/) もしくは [GitHub](https://github.com/yokra9/MaterialSetupUtils/releases) から取得した Zip ファイルを展開 (解凍) します。
+1. [Booth](https://yokra.booth.pm/items/3588840) もしくは [GitHub](https://github.com/yokra9/MaterialSetupUtils/releases) から取得した Zip ファイルを展開 (解凍) します。
 2. `.unitypackage` ファイルを、Assets にドラッグ&ドロップします。
 
 ## 使い方
