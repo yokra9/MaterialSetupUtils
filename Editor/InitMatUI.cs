@@ -85,10 +85,11 @@ namespace Yokra9.MaterialSetupUtils
                     {
                         string propertyName = Source.shader.GetPropertyName(i);
                         string propertyDescription = Source.shader.GetPropertyDescription(i);
-                        string label = propertyDescription == "" ? propertyName : propertyDescription;
+                        string labelText = propertyDescription == "" ? propertyName : propertyDescription;
+                        GUIContent label = new GUIContent(labelText, propertyName);
 
-                        // ラベルとフィルタ文字列が前方一致しなかったら表示をスキップ
-                        if (!label.StartsWith(_filterText)) continue;
+                        // ラベル文字列とフィルタ文字列が前方一致しなかったら表示をスキップ
+                        if (!labelText.StartsWith(_filterText)) continue;
 
                         // シェーダプロパティをコピーするか？
                         IsCopyProperty[i] = EditorGUILayout.ToggleLeft(label, IsCopyProperty[i]);
