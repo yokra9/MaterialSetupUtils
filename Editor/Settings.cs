@@ -37,7 +37,7 @@ namespace Yokra9.MaterialSetupUtils
         public Settings(bool[] isCopyProperty)
         {
             if (isCopyProperty is null) throw new ArgumentNullException("isCopyProperty");
-            
+
             IsCopyProperty = isCopyProperty;
         }
 
