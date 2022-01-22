@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Xml.Serialization;
 
@@ -24,7 +25,10 @@ namespace Yokra9.MaterialSetupUtils
         /// <summary>
         /// デフォルトのコンストラクタ（デシリアライザ用）
         /// </summary>
-        public Settings() { }
+        public Settings()
+        {
+            IsCopyProperty = new bool[0];
+        }
 
         /// <summary>
         /// コンストラクタ
@@ -32,6 +36,8 @@ namespace Yokra9.MaterialSetupUtils
         /// <param name="isCopyProperty">添え字のプロパティをコピーするか？</param>
         public Settings(bool[] isCopyProperty)
         {
+            if (isCopyProperty is null) throw new ArgumentNullException("isCopyProperty");
+            
             IsCopyProperty = isCopyProperty;
         }
 

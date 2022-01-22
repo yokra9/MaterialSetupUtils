@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -25,6 +26,9 @@ namespace Yokra9.MaterialSetupUtils
         /// <param name="isCopyProperty">添え字のプロパティをコピーするか？</param>
         public InitMaterial(Material source, bool[] isCopyProperty)
         {
+            if(source is null) throw new ArgumentNullException("source");
+            if(isCopyProperty is null) throw new ArgumentNullException("isCopyProperty");
+
             Source = source;
             IsCopyProperty = isCopyProperty;
         }
@@ -35,6 +39,8 @@ namespace Yokra9.MaterialSetupUtils
         /// <param name="mat">対象マテリアル</param>
         public Material SetUp(Material mat)
         {
+            if(mat is null) throw new ArgumentNullException("mat");
+
             // コピー元と同じシェーダを設定
             mat.shader = Source.shader;
 

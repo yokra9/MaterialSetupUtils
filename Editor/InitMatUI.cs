@@ -14,7 +14,7 @@ namespace Yokra9.MaterialSetupUtils
         /// <summary>
         /// コピー元マテリアル
         /// </summary>
-        public Material Source = null;
+        public Material Source;
 
         /// <summary>
         /// 添え字のプロパティをコピーするか？
@@ -56,7 +56,7 @@ namespace Yokra9.MaterialSetupUtils
              */
             EditorGUILayout.LabelField("Source", EditorStyles.boldLabel);
             Source = (Material)EditorGUILayout.ObjectField("Source Material", Source, typeof(Material), true);
-            if (Source == null) return;
+            if (Source is null) return;
 
             /*
               シェーダの取得
