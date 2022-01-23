@@ -6,6 +6,7 @@
 
 1. [Booth](https://yokra.booth.pm/items/3588840) もしくは [GitHub](https://github.com/yokra9/MaterialSetupUtils/releases) から取得した Zip ファイルを展開 (解凍) します。
 2. `.unitypackage` ファイルを、Assets にドラッグ&ドロップします。
+3. `import` ボタンを押下します。アップデートの場合は、`Settings.xml` のチェックを外しておくと保存した設定情報を維持できます。
 
 ## 使い方
 
